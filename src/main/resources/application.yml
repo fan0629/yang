@@ -1,0 +1,23 @@
+server:
+  port: 9264
+logging:
+  file:
+    name: /tmp/yang.log
+  level:
+    root: info
+spring:
+  datasource:
+    url: jdbc:sqlite:loveY.db
+    driver-class-name: org.sqlite.JDBC
+    username: yang
+    password: 9264
+  jpa:
+    database-platform: com.fan.yang.sqlite.SQLiteDialect
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    open-in-view: true
